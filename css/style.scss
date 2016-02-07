@@ -1,0 +1,39 @@
+html,
+body {
+  color: #000;
+}
+
+button[disabled],
+a[disabled] {
+  color: #aaa;
+}
+
+ul,
+ol {
+
+  li {
+    margin-bottom: 0;
+  }
+}
+
+ul.blank {
+  list-style: none;
+}
+
+button {
+  margin-left: 10px;
+}
+
+.counter-app {
+  position: absolute;
+  top: 50px;
+  padding: 10px 20px;
+}
+
+/* Skeleton overrides */
+.button-tiny {
+  padding: 2px 8px;
+  margin: 0;
+  height: 24px;
+  line-height: 14px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Elm Test Runner</title>
+    <link rel="stylesheet" href="/css/lib/normalize.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/css/lib/skeleton.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/css/style.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/css/test-runner.min.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <script src="gen/main.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var storedState = localStorage.getItem('testSuite');
+      var startingState = storedState ? JSON.parse(storedState) : null;
+
+      var myApp = Elm.fullscreen(Elm.Main, { incomingTestSuite: startingState });
+
+      myApp.ports.outgoingTestSuite.subscribe(function(suite) {
+        localStorage.setItem("testSuite", JSON.stringify(suite));
+      });
+    </script>
+  </body>
+</html>

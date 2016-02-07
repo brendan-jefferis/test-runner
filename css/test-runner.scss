@@ -1,0 +1,64 @@
+.test-runner {
+  background: #f3f3f3;
+  border-bottom: 2px solid #e1e1e1;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+
+  .tool-bar {
+    padding: 8px 8px;
+
+    .icon-record {
+      border-radius: 100%;
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+      display: inline-block;
+      background-color: #E0D6D6;
+      vertical-align: middle;
+
+      &.recording {
+        background-color: red;
+      }
+    }
+
+    .recording-status {
+      font-size: 14px;
+      color: #666;
+      margin-right: 10px;
+    }
+
+    button {
+      margin-right: 10px;
+    }
+  }
+
+  .test-tools {
+    background: #fafafa;
+    padding: 10px;
+    border-top: 1px solid #e6e6e6;
+
+    .case-name {
+      min-width: 400px;
+    }
+
+    .results {
+
+        .pass {
+          color: green;
+        }
+
+        .fail {
+          color: red;
+        }
+
+        .result {
+          font-weight: bold;
+        }
+    }
+
+    table {
+      word-break: break-word;
+    }
+  }
+}

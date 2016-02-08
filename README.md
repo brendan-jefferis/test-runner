@@ -1,6 +1,6 @@
 # elm-test-runner
 
-This prototype is a simple proof on concept for a new way of recording and running automated UI tests for Elm code. It is designed to be used by testers, with no programming knowledge required.
+This prototype is a simple proof on concept for a new way of recording and running automated UI integration/end-to-end tests for Elm code. It is designed to be used by testers, with no programming knowledge required.
 
 The purpose of this project was to offer an alternative to current UI automation methods (e.g., Selenium, Protractor etc) that rely on attaching event listeners to DOM elements - a technique that tends to be brittle and labour-intensive but is seen as the only way to achieve that goal. Thankfully, Elm provides opportunities for real improvement here.
 
@@ -25,7 +25,7 @@ Since this completely bypasses the view there is no DOM targeting required, whic
 You could argue that the fact that the view is bypassed is a bad thing, but my argument is that end-to-end UI testing should be testing the application's logic, i.e., given x operations, will the application be in the expected state - which has nothing to do with presentation.
 
 #### CURRRENT LIMITATIONS
-1. I've quickly put this together as a proof of the core concept, but the component being tested is trivially simple. The tests here are actually more like unit tests. I believe this concept will work equally well with multiple components but it would require a slightly more sophisticated implementation. Probably along the lines of pushing the component name with the action in a tuple, e.g., `[(Counter, Increment), (OtherComponent, Foo)]` etc.
+1. I've quickly put this together as a proof of the core concept, but the component being tested is trivially simple. I believe this concept will work equally well with multiple components but it would require a slightly more sophisticated implementation. Probably along the lines of pushing the component name with the action in a tuple, e.g., `[(Counter, Increment), (OtherComponent, Foo)]` etc.
 
 2. The testing suite (which lives in Main.elm) is too tightly coupled with Counter.elm. Ideally, this testing component would be able to be placed on top of any project with minimal wiring.
 
